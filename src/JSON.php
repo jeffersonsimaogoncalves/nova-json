@@ -8,6 +8,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\Heading;
 use Laravel\Nova\Fields\Hidden;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Makeable;
@@ -93,8 +94,7 @@ class JSON extends MergeValue
     private function holdsFieldValues($attribute): bool
     {
         return is_array($attribute)
-            || $attribute instanceof Collection
-            || is_callable($attribute);
+            || $attribute instanceof Collection;
     }
 
     /**
@@ -103,15 +103,16 @@ class JSON extends MergeValue
      * @param  \Closure|array  $fields
      * @return array
      */
-    protected function prepareFields($fields): array
+    protected function prepareFields($fields, $showHeading = true): array
     {
         return collect(is_callable($fields) ? $fields() : $fields)
-            ->map(function ($field) {
+            ->map(function ($field) use ($fields) {
                 return $field instanceof self
                     ? $this->prepareNestedJSONFields($field)
                     : [$this->prepareField($field)];
             })
             ->flatten()
+            ->when($showHeading, fn ($collect) => $collect->prepend(Heading::make('<b>' . $this->name . '</b>')->asHtml()))
             ->all();
     }
 
@@ -131,13 +132,13 @@ class JSON extends MergeValue
                 return;
             }
 
-            if (! $model->hasCast($this->attribute)) {
+            if (!$model->hasCast($this->attribute)) {
                 throw AttributeCast::notFoundFor($this->attribute);
             }
 
             $value = $this->fetchValueFromRequest($request, $model, $attribute, $requestAttribute);
 
-            if (! $this->nullable && $this->isNullValue($value)) {
+            if (!$this->nullable && $this->isNullValue($value)) {
                 return;
             }
 
@@ -161,7 +162,7 @@ class JSON extends MergeValue
             $field->fillUsing($json->fillCallbacks[$field->attribute] ?? null);
         })->all();
 
-        return  $this->prepareFields($fields);
+        return  $this->prepareFields($fields, false);
     }
 
     /**
@@ -291,7 +292,7 @@ class JSON extends MergeValue
                 ? $fillAtOnceCallback($request, $requestValues, $model, $attribute, $requestAttribute)
                 : $requestValues;
 
-            if (! $this->nullable && $this->isNullValue($value)) {
+            if (!$this->nullable && $this->isNullValue($value)) {
                 return;
             }
 
@@ -336,7 +337,7 @@ class JSON extends MergeValue
      */
     public function __call($method, $attrs): self
     {
-        if (! method_exists(\Laravel\Nova\Fields\Field::class, $method)) {
+        if (!method_exists(\Laravel\Nova\Fields\Field::class, $method)) {
             throw new \BadMethodCallException;
         }
 
