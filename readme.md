@@ -3,6 +3,8 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/stepanenko3/nova-json.svg?style=flat-square)](https://packagist.org/packages/stepanenko3/nova-json)
 ![Tests](https://github.com/stepanenko3/nova-json/workflows/run-tests/badge.svg?branch=main)
 
+Original repositrory https://github.com/Naoray/nova-json
+
 The `JSON` field wrapper allows you to specify multiple fields which will be resolved into a single model attribute. This allows you to validate every information you store inside a json column seperately.
 
 ```php
