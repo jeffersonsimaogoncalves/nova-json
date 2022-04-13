@@ -1,6 +1,6 @@
 <?php
 
-namespace Naoray\NovaJson;
+namespace Stepanenko3\NovaJson;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Resources\MergeValue;
@@ -11,7 +11,7 @@ use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\Hidden;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Makeable;
-use Naoray\NovaJson\Exceptions\AttributeCast;
+use Stepanenko3\NovaJson\Exceptions\AttributeCast;
 
 class JSON extends MergeValue
 {

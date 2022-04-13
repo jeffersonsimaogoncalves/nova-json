@@ -1,12 +1,12 @@
 <?php
 
-namespace Naoray\NovaJson\Tests;
+namespace Stepanenko3\NovaJson\Tests;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Naoray\NovaJson\Exceptions\AttributeCast;
-use Naoray\NovaJson\JSON;
+use Stepanenko3\NovaJson\Exceptions\AttributeCast;
+use Stepanenko3\NovaJson\JSON;
 
 class JSONTest extends TestCase
 {

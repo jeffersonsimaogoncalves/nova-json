@@ -1,9 +1,9 @@
 <?php
 
-namespace Naoray\NovaJson\Tests;
+namespace Stepanenko3\NovaJson\Tests;
 
 use Laravel\Nova\Fields\Text;
-use Naoray\NovaJson\JSON;
+use Stepanenko3\NovaJson\JSON;
 
 class ViewRestrictionTest extends TestCase
 {

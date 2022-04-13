@@ -1,5 +1,5 @@
 {
-  "name": "naoray/nova-json",
+  "name": "stepanenko3/nova-json",
   "description": "Nova json field to spread a json column throughout multiple fields.",
   "type": "package",
   "license": "MIT",
@@ -25,12 +25,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Naoray\\NovaJson\\": "./src"
+      "Stepanenko3\\NovaJson\\": "./src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Naoray\\NovaJson\\Tests\\": "tests"
+      "Stepanenko3\\NovaJson\\Tests\\": "tests"
     }
   },
   "require-dev": {

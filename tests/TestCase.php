@@ -1,6 +1,6 @@
 <?php
 
-namespace Naoray\NovaJson\Tests;
+namespace Stepanenko3\NovaJson\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
 

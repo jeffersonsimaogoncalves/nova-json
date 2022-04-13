@@ -1,6 +1,6 @@
 <?php
 
-namespace Naoray\NovaJson\Exceptions;
+namespace Stepanenko3\NovaJson\Exceptions;
 
 use Exception;
 

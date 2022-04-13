@@ -175,7 +175,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 - [All Contributors](https://github.com/stepanenko3/nova-json/contributors)
 
 ## Security
-If you discover any security-related issues, please email krishan.koenig@googlemail.com instead of using the issue tracker.
+If you discover any security-related issues, please using the issue tracker or pull requests.
 
 ## License
 The MIT License (MIT). Please see [License File](/LICENSE.md) for more information.
