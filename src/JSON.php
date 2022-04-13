@@ -112,7 +112,7 @@ class JSON extends MergeValue
                     : [$this->prepareField($field)];
             })
             ->flatten()
-            ->when($showHeading, fn ($collect) => $collect->prepend(Heading::make('<b>' . $this->name . '</b>')->asHtml()))
+            ->when($showHeading, fn ($collect) => $collect->prepend(Heading::make('<b>'.$this->name.'</b>')->asHtml()))
             ->all();
     }
 
@@ -132,13 +132,13 @@ class JSON extends MergeValue
                 return;
             }
 
-            if (!$model->hasCast($this->attribute)) {
+            if (! $model->hasCast($this->attribute)) {
                 throw AttributeCast::notFoundFor($this->attribute);
             }
 
             $value = $this->fetchValueFromRequest($request, $model, $attribute, $requestAttribute);
 
-            if (!$this->nullable && $this->isNullValue($value)) {
+            if (! $this->nullable && $this->isNullValue($value)) {
                 return;
             }
 
@@ -292,7 +292,7 @@ class JSON extends MergeValue
                 ? $fillAtOnceCallback($request, $requestValues, $model, $attribute, $requestAttribute)
                 : $requestValues;
 
-            if (!$this->nullable && $this->isNullValue($value)) {
+            if (! $this->nullable && $this->isNullValue($value)) {
                 return;
             }
 
@@ -337,7 +337,7 @@ class JSON extends MergeValue
      */
     public function __call($method, $attrs): self
     {
-        if (!method_exists(\Laravel\Nova\Fields\Field::class, $method)) {
+        if (! method_exists(\Laravel\Nova\Fields\Field::class, $method)) {
             throw new \BadMethodCallException;
         }
 
