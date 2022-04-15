@@ -142,7 +142,7 @@ new Panel('Brand Settings',
         Image::make('Logo')->disk('public'),
         Color::make('Primary Color')->swatches(),
         Color::make('Secondary Color')->swatches(),
-    ])-,
+    ]),
 ),
 ```
 2. if you need other fields inside the Panel you can use splat operator like this:
