@@ -1,9 +1,8 @@
 # nova-json
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/stepanenko3/nova-json.svg?style=flat-square)](https://packagist.org/packages/stepanenko3/nova-json)
-![Tests](https://github.com/stepanenko3/nova-json/workflows/run-tests/badge.svg?branch=main)
 
-Original repositrory https://github.com/Naoray/nova-json
+> This package is intended for the version of Laravel Nova 4, the original repository does not support Nova 4 at the time of creation, and the author does not accept PR
+> Original repositrory for Nova 4 https://github.com/Naoray/nova-json
 
 The `JSON` field wrapper allows you to specify multiple fields which will be resolved into a single model attribute. This allows you to validate every information you store inside a json column seperately.
 
@@ -157,13 +156,6 @@ new Panel('Brand Settings', [
 ]),
 ```
 
-## Testing
-Run the tests with:
-
-``` bash
-vendor/bin/phpunit
-```
-
 ## Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
@@ -174,7 +166,6 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 - [Artem Stepanenko](https://github.com/stepanenko3)
 - [Krishan Koenig](https://github.com/naoray)
-- [All Contributors](https://github.com/stepanenko3/nova-json/contributors)
 
 ## Security
 If you discover any security-related issues, please using the issue tracker or pull requests.
