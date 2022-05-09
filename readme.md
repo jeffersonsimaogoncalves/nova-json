@@ -1,5 +1,8 @@
-# nova-json
+# Nova JSON Field
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/stepanenko3/nova-json.svg?style=flat-square)](https://packagist.org/packages/stepanenko3/nova-json)
 [![Total Downloads](https://img.shields.io/packagist/dt/stepanenko3/nova-json.svg?style=flat-square)](https://packagist.org/packages/stepanenko3/nova-json)
+[![License](https://poser.pugx.org/stepanenko3/nova-json/license)](https://packagist.org/packages/stepanenko3/nova-json)
 
 > This package is intended for the version of Laravel Nova 4, the original repository does not support Nova 4 at the time of creation, and the author does not accept PR
 > Original repositrory for Nova 4 https://github.com/Naoray/nova-json
@@ -26,7 +29,7 @@ The above will be resolved into a single `author` attribute on the model.
 Add the column's name, you want to use in the `JSON` field, to your `$casts` array on the resource's model!
 
 ## Usage
-- [nova-json](#nova-json)
+- [Nova JSON Field](#nova-json-field)
   - [Install & setup](#install--setup)
   - [Usage](#usage)
     - [FillUsing callbacks](#fillusing-callbacks)
@@ -36,7 +39,6 @@ Add the column's name, you want to use in the `JSON` field, to your `$casts` arr
     - [Nested Structures](#nested-structures)
     - [Use inside Panels](#use-inside-panels)
       - [Examples](#examples)
-  - [Testing](#testing)
   - [Changelog](#changelog)
   - [Contributing](#contributing)
   - [Credits](#credits)
