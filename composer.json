@@ -18,23 +18,19 @@
     }
   ],
   "require": {
-    "php": "^8.0",
-    "illuminate/http": "^9.0",
-    "illuminate/support": "^9.0",
+    "php": ">=8.0",
     "laravel/nova": "^4.0"
   },
+  "repositories": [
+      {
+          "type": "path",
+          "url": "../nova"
+      }
+  ],
   "autoload": {
     "psr-4": {
       "Stepanenko3\\NovaJson\\": "./src"
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Stepanenko3\\NovaJson\\Tests\\": "tests"
-    }
-  },
-  "require-dev": {
-    "orchestra/testbench": "^6.0||^7.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
